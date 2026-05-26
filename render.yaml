@@ -2,7 +2,7 @@ services:
   # 1. Django REST Backend API (Docker Container)
   - type: web
     name: aethera-carbon-backend
-    env: docker
+    runtime: docker
     dockerContext: backend
     dockerfilePath: backend/Dockerfile
     plan: free
@@ -17,14 +17,12 @@ services:
   # 2. React Vite Frontend (Static Hosting)
   - type: web
     name: aethera-carbon-frontend
-    env: static
+    runtime: static
     rootDir: frontend
     buildCommand: npm install && npm run build
-    publishPath: dist
+    staticPublishPath: dist
     plan: free
     envVars:
       - key: VITE_API_BASE_URL
-        fromService:
-          type: web
-          name: aethera-carbon-backend
-          property: host
+        value: https://aethera-carbon-backend.onrender.com
+
