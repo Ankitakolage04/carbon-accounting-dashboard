@@ -1,0 +1,34 @@
+# Task Checklist - Carbon Accounting & Ingestion System
+
+- [x] Create Django REST backend foundation
+  - [x] Set up virtual environment and install dependencies (`django`, `djangorestframework`, `django-cors-headers`)
+  - [x] Initialize Django project `backend` and app `api`
+- [x] Implement Backend Models (`api/models.py`)
+  - [x] `Tenant`, `PlantLookup`, `FacilityLookup`
+  - [x] `IngestedRow`, `NormalizedData`, `AuditTrail`
+- [x] Implement Parser & Validation logic (`api/parsers.py`)
+  - [x] SAP CSV Parser (German headers, validation, plant lookup)
+  - [x] Utility CSV Parser (billing midpoints, overlaps, rate validations)
+  - [x] Travel API JSON Parser (Haversine formula for airport distance, cabin class multipliers)
+- [x] Implement API Views and Endpoints (`api/views.py`, `api/urls.py`)
+  - [x] Ingest endpoints (SAP upload, Utility upload, Travel webhook)
+  - [x] Edit / Correction endpoint (re-trigger validation & normalization, write to audit trail)
+  - [x] Approval endpoint (locking rows, writing to audit trail)
+  - [x] Analytics endpoint (grouped emissions data for the frontend cards)
+- [x] Write Backend Unit Tests (`api/tests.py`)
+  - [x] Verify parsers, distance fallback, thresholds, audit trails
+  - [x] Run backend tests and verify success
+- [x] Create React Frontend (`frontend/`)
+  - [x] Initialize React project using Vite
+  - [x] Implement custom CSS styling with glassmorphism/dark-mode aesthetics
+  - [x] Build components: Metrics, Uploader, API Simulator, Review Board table
+- [x] Implement Frontend State & Integration
+  - [x] Wire up dashboard to backend endpoints
+  - [x] Build interactive edit/audit-history drawer modal
+- [x] Create Documentation Files (Deliverables)
+  - [x] `MODEL.md` (multi-tenancy, scopes, normalization, audit trail)
+  - [x] `DECISIONS.md` (resolved ambiguities, subset handled, questions for PM)
+  - [x] `TRADEOFFS.md` (three items not built and why)
+  - [x] `SOURCES.md` (research details, sample data shapes, breaks in real deployment)
+- [x] Build container setup (`Dockerfile`) & config files for one-click deployment
+- [x] Verify whole application locally & prepare deployment URLs

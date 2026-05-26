@@ -1,0 +1,6 @@
+BUDAT,MENGE,MEINS,WERKS,WRBTR,WAERS,MATNR,MAKTX
+2026-05-10,1200,L,DE01,1800,EUR,MAT-FUEL-01,Diesel fuel procurement
+2026-05-11,250,GAL,US01,950,USD,MAT-FUEL-02,Petrol fuel procurement
+2026-05-12,50,PC,DE01,150,EUR,MAT-PROC-99,Standard office supplies (Scope 3)
+2026-05-13,600,L,DE99,900,EUR,MAT-FUEL-01,Diesel (Suspicious: unknown plant DE99)
+2026-05-14,20,L,DE01,240,EUR,MAT-FUEL-01,Diesel (Suspicious: high rate 12.00/L)

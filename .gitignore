@@ -1,0 +1,16 @@
+# Python/Django
+backend/.venv/
+**/__pycache__/
+**/*.pyc
+backend/db.sqlite3
+
+# Node/React
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+
+# Logs and system files
+*.log
+.DS_Store
+.vscode/
+.idea/

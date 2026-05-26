@@ -1,0 +1,5 @@
+django>=5.0
+djangorestframework
+django-cors-headers
+gunicorn
+dj-database-url
