@@ -22,3 +22,9 @@ services:
     buildCommand: npm install && npm run build
     publishPath: dist
     plan: free
+    envVars:
+      - key: VITE_API_BASE_URL
+        fromService:
+          type: web
+          name: aethera-carbon-backend
+          property: host
