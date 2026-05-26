@@ -5,7 +5,7 @@ import {
   Plus, Code, Download, X, Eye, Edit3, Trash2
 } from 'lucide-react';
 
-const API_BASE = 'http://localhost:8000/api/v1';
+const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000/api/v1';
 
 const DEFAULT_TRAVEL_JSON = `[
   {
